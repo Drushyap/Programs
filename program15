@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+    int num,flag=0;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    while(num!=1)
+    {
+        if(num==4||num==16||num==37||num==58||num==89||num==145||num==42||num==20)
+        {
+            flag=1;
+            break;
+        }
+        int sum=0,x;
+        while(num>0)
+        {
+            x=num%10;
+            sum=sum+(x*x);
+            num=num/10;
+        }
+        num=sum;
+    }
+    if(flag==0)
+    {
+        printf(" happy number");
+    }
+    else
+    {
+        printf("%d is a unhappy number",num);
+    }
+}
